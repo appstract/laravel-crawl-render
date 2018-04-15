@@ -11,7 +11,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Crawl extends Command
 {
-
     /**
      * The console command name.
      *
