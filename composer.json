@@ -1,0 +1,54 @@
+{
+    "name": "appstract/laravel-crawl-render",
+    "description": "Pre-render your site for web crawlers",
+    "keywords": [
+        "appstract",
+        "crawler",
+        "render",
+        "vue"
+    ],
+    "homepage": "https://github.com/appstract/laravel-crawl-render",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olav van Schie",
+            "email": "hello@appstract.team",
+            "homepage": "https://appstract.team",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "spatie/crawler": "^4.0",
+        "jaybizzle/laravel-crawler-detect": "1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Appstract\\CrawlRender\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Appstract\\CrawlRender\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Appstract\\CrawlRender\\CrawlRenderServiceProvider"
+            ],
+            "aliases": {
+                "Alias": "Appstract\\CrawlRender\\CrawlRenderFacade"
+            }
+        }
+    }
+}
