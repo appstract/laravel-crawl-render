@@ -4,14 +4,13 @@ namespace Appstract\CrawlRender;
 
 use Storage;
 use Psr\Http\Message\UriInterface;
-use Psr\Http\Message\ResponseInterface;
 use Spatie\Browsershot\Browsershot;
+use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class CrawlObserver extends \Spatie\Crawler\CrawlObserver
 {
-
     protected $consoleOutput;
 
     public function __construct(OutputInterface $consoleOutput)

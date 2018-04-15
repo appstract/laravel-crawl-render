@@ -1,4 +1,5 @@
 <?php
+
 namespace Appstract\CrawlRender\Middleware;
 
 use Closure;
@@ -7,7 +8,6 @@ use Jaybizzle\LaravelCrawlerDetect\Facades\LaravelCrawlerDetect as Crawler;
 
 class CrawlerPrerenderMiddleware
 {
-
     /**
      * @param         $request
      * @param Closure $next
