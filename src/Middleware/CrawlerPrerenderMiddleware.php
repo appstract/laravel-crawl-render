@@ -19,11 +19,7 @@ class CrawlerPrerenderMiddleware
     {
         $response = $next($request);
 
-        if (Crawler::isCrawler()) {
-            // true if crawler user agent detected
-        }
-
-        if ($this->hasPrerenderedView($request->getPathInfo())) {
+        if (Crawler::isCrawler() && $this->hasPrerenderedView($request->getPathInfo())) {
             $response->setContent(
                 $this->getPrerenderedView($request->getPathInfo())
             );
