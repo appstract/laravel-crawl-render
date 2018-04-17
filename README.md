@@ -23,7 +23,7 @@ You need Puppeteer installed for Browsershot to work, see: [https://github.com/s
 First add the middleware to any routes you want to Pre-render.
 
 ``` php
-\Appstract\CrawlRender\Middleware\CrawlerPrerenderMiddleware:class
+\Appstract\CrawlRender\Middleware\CrawlerPrerenderMiddleware::class
 ```
 
 Then run the crawler to pre-render your site:
