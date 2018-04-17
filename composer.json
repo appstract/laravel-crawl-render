@@ -5,6 +5,7 @@
         "appstract",
         "crawler",
         "render",
+        "pre-render",
         "vue"
     ],
     "homepage": "https://github.com/appstract/laravel-crawl-render",
@@ -18,7 +19,7 @@
         }
     ],
     "require": {
-        "php": "^7.0",
+        "php": "^7.1",
         "spatie/crawler": "^4.0",
         "jaybizzle/laravel-crawler-detect": "1.*"
     },
@@ -45,10 +46,7 @@
         "laravel": {
             "providers": [
                 "Appstract\\CrawlRender\\CrawlRenderServiceProvider"
-            ],
-            "aliases": {
-                "Alias": "Appstract\\CrawlRender\\CrawlRenderFacade"
-            }
+            ]
         }
     }
 }
