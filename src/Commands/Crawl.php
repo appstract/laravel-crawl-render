@@ -3,9 +3,9 @@
 namespace Appstract\CrawlRender\Commands;
 
 use Storage;
-use Spatie\Browsershot\Browsershot;
 use Spatie\Crawler\Crawler;
 use Illuminate\Console\Command;
+use Spatie\Browsershot\Browsershot;
 use Spatie\Crawler\CrawlInternalUrls;
 use Appstract\CrawlRender\CrawlObserver;
 use Symfony\Component\Console\Input\InputInterface;
