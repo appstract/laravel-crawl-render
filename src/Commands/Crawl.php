@@ -2,6 +2,7 @@
 
 namespace Appstract\CrawlRender\Commands;
 
+use Spatie\Browsershot\Browsershot;
 use Spatie\Crawler\Crawler;
 use Illuminate\Console\Command;
 use Spatie\Crawler\CrawlInternalUrls;
@@ -38,6 +39,7 @@ class Crawl extends Command
             ->setCrawlObserver(new CrawlObserver($output))
             ->setCrawlProfile(new CrawlInternalUrls(config('app.url')))
             ->executeJavaScript()
+            ->setBrowsershot((new Browsershot())->waitUntilNetworkIdle())
             ->startCrawling(config('app.url'));
     }
 }
