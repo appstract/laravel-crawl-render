@@ -2,9 +2,10 @@
 
 namespace Appstract\CrawlRender\Commands;
 
+use Storage;
+use Spatie\Browsershot\Browsershot;
 use Spatie\Crawler\Crawler;
 use Illuminate\Console\Command;
-use Spatie\Browsershot\Browsershot;
 use Spatie\Crawler\CrawlInternalUrls;
 use Appstract\CrawlRender\CrawlObserver;
 use Symfony\Component\Console\Input\InputInterface;
@@ -33,6 +34,9 @@ class Crawl extends Command
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
+        $output->writeln('Removing old stuff');
+        Storage::disk('local')->deleteDirectory('prerendered');
+
         $output->writeln('Starting crawler');
 
         Crawler::create()
