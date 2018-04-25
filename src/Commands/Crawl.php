@@ -43,7 +43,8 @@ class Crawl extends Command
             ->setCrawlObserver(new CrawlObserver($output))
             ->setCrawlProfile(new CrawlInternalUrls(config('app.url')))
             ->executeJavaScript()
-            ->setBrowsershot((new Browsershot())->waitUntilNetworkIdle())
+            //->setBrowsershot((new Browsershot())->waitUntilNetworkIdle())
+            ->setBrowsershot((new Browsershot())->setDelay(1500))
             ->startCrawling(config('app.url'));
     }
 }

@@ -38,7 +38,8 @@ class CrawlObserver extends \Spatie\Crawler\CrawlObserver
     public function crawled(UriInterface $url, ResponseInterface $response, ?UriInterface $foundOnUrl = null)
     {
         Storage::disk('local')->put('prerendered/'.$url->getPath().'/dom.html',
-            Browsershot::url($url)->waitUntilNetworkIdle()->bodyHtml()
+            //Browsershot::url($url)->waitUntilNetworkIdle()->bodyHtml()
+            Browsershot::url($url)->setDelay(1500)->bodyHtml()
         );
     }
 
