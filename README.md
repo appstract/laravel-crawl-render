@@ -17,7 +17,7 @@ You can install the package via composer:
 composer require appstract/laravel-crawl-render
 ```
 
-You need Puppeteer installed for Browsershot to work, see: [https://github.com/spatie/browsershot#requirements](https://github.com/spatie/browsershot#requirements) 
+You need Puppeteer to be installed for Browsershot to work, see: [https://github.com/spatie/browsershot#requirements](https://github.com/spatie/browsershot#requirements) 
 
 ## Usage
 First add the middleware to any routes you want to Pre-render.
